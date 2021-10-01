@@ -7,9 +7,10 @@ opcua_server_SOURCES=src/opcua-tsn/multicallback_server.c   \
 			src/opcua-tsn/opcua_custom.c	\
 			src/opcua-tsn/opcua_datasource.c\
 			src/opcua-tsn/opcua_publish.c	\
-			src/opcua-tsn/opcua_subscribe.c
+			src/opcua-tsn/opcua_subscribe.c	\
+			src/opcua-tsn/custom_datatype.c
 txrx_tsn_LDADD = $(libbpf_LIBS) $(libelf_LIBS) -lpthread
-opcua_server_LDADD = $(open62451_LIBS) $(libjson_LIBS) $(libbpf_LIBS) $(libelf_LIBS) -lpthread
+opcua_server_LDADD = $(open62451_LIBS) $(libjson_LIBS) $(libbpf_LIBS) $(libelf_LIBS) -lpthread -lasound
 
 AM_CPPFLAGS = -O2 -g -fstack-protector-strong -fPIE -fPIC -D_FORTIFY_SOURCE=2 \
 		-Wformat -Wformat-security -Wformat-overflow -Wno-parentheses \

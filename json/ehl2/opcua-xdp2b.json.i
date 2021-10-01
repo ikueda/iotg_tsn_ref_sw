@@ -20,7 +20,8 @@
         "socket_prio": 2,
         "two_way_data": true,
         "cpu_affinity": 2,
-        "xdp_queue": 2
+        "xdp_queue": 2,
+        "device": "sysdefault:CARD=Device"
       }
     },
     "subscribers": {
